@@ -20,15 +20,6 @@ jobs:
         with:
           node-version: 18   # You can change version if needed
 
-      # Step 3: Cache node_modules
-      - name: Cache node modules
-        uses: actions/cache@v3
-        with:
-          path: ~/.npm       # cache npm packages
-          key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-
       # Step 3: Install dependencies
       - name: Install dependencies
         run: npm install
