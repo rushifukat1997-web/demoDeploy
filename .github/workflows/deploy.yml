@@ -1,10 +1,9 @@
-```yaml
 name: React CI/CD
 
 on:
   push:
     branches:
-      - master   # Trigger workflow only when pushing to master branch
+      - testMaster   # Trigger workflow only when pushing to master branch
 
 jobs:
   build:
@@ -39,4 +38,3 @@ jobs:
         with:
           github_token: ${{ secrets.Token }}
           publish_dir: ./build
-```
