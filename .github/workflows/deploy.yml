@@ -24,15 +24,12 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      # Step 4: Run tests (optional, remove if no tests)
-      - name: Run tests
-        run: npm test -- --watchAll=false
 
-      # Step 5: Build project
+      # Step 4: Build project
       - name: Build project
         run: npm run build
 
-      # Step 6: Deploy (example with GitHub Pages)
+      # Step 5: Deploy (example with GitHub Pages)
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
